@@ -1,0 +1,37 @@
+# Build outputs
+out/
+dist/
+
+# Dependencies
+node_modules/
+
+# VS Code extension artifacts
+*.vsix
+.vscode-test/
+
+# Logs and temp
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+*.tgz
+.tmp/
+tmp/
+temp/
+.cache/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/

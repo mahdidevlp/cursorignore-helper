@@ -1,0 +1,50 @@
+{
+  "name": "cursorignore-helper",
+  "displayName": "Cursor Ignore Helper",
+  "description": "Quickly add or remove multiple files/folders from .cursorignore",
+  "version": "1.0.0",
+  "publisher": "mahdidevlp",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onCommand:cursorignore.add",
+    "onCommand:cursorignore.remove"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorignore.add",
+        "title": "Add to .cursorignore"
+      },
+      {
+        "command": "cursorignore.remove",
+        "title": "Remove from .cursorignore"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "cursorignore.add",
+          "group": "navigation"
+        },
+        {
+          "command": "cursorignore.remove",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.5.0"
+  }
+}
+
